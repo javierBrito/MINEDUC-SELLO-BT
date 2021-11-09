@@ -41,6 +41,17 @@ create table GIEE_SBT_EMPRESA  (
    EMP_CEDULACON        VARCHAR(10)                     not null,
    constraint PK_GIEE_SBT_EMPRESA primary key (EMP_CODIGO)
 );
+  GRANT UPDATE ON "GIEE"."GIEE_SBT_EMPRESA" TO "ASIGNACIONES";
+  GRANT SELECT ON "GIEE"."GIEE_SBT_EMPRESA" TO "ASIGNACIONES";
+  GRANT INSERT ON "GIEE"."GIEE_SBT_EMPRESA" TO "ASIGNACIONES";
+  GRANT DELETE ON "GIEE"."GIEE_SBT_EMPRESA" TO "ASIGNACIONES";
+
+/*==============================================================*/
+/* Sequence 1: SEQ_SBT_EMPRESA                                   */
+/*==============================================================*/
+CREATE SEQUENCE  "GIEE"."SEQ_SBT_EMPRESA"  MINVALUE 0 MAXVALUE 9999999999999999999 INCREMENT BY 1 START WITH 0 CACHE 20 NOORDER  NOCYCLE  NOPARTITION;
+GRANT SELECT ON "GIEE"."SEQ_SBT_EMPRESA" TO "ASIGNACIONES";
+GRANT ALTER ON "GIEE"."SEQ_SBT_EMPRESA" TO "ASIGNACIONES";
 
 /*==============================================================*/
 /* Table: GIEE_SBT_SECTOR_EMPRESA                               */
